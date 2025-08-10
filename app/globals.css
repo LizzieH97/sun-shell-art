@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Keep CSS variables for other uses like theming */
+:root {
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+  }
+}
+
+/* Only set font-family globally, no color or background overrides */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
