@@ -15,9 +15,12 @@ export default function ByCategory() {
             Check out the categories below!
           </h1>
           <div className="flex flex-wrap items-center justify-center">
-            {categories.map((category) => {
+            {categories.map((category, index) => {
               return (
-                <div className="bg-bark m-6 p-2 border-8 border-lavender rounded-3xl text-cream text-3xl text-center w-64">
+                <div
+                  className="bg-bark m-6 p-2 border-8 border-lavender rounded-3xl text-cream text-3xl text-center w-64"
+                  key={index}
+                >
                   {category}
                 </div>
               );
