@@ -5,7 +5,7 @@ import NavBar from "../components/navBar";
 export default function ByCategory() {
   const categories = ["this", "is", "where", "the", "categories", "go"];
   return (
-    <div className="font-delius grid grid-rows-[10px_1fr_20px] items-center bg-forest justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 ">
+    <div className="font-delius grid grid-rows-[10px_1fr_20px] items-center bg-forest justify-items-center min-h-screen p-8 pb-20 gap-16">
       <div className="row-start-1 w-full">
         <NavBar />
       </div>
