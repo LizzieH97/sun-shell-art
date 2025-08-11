@@ -1,4 +1,6 @@
+"use client";
 import NavBar from "../components/navBar";
+import SignupForm from "../components/signUpForm";
 
 export default function Account() {
   return (
@@ -7,17 +9,9 @@ export default function Account() {
         <NavBar />
       </div>
       <main className="row-start-2 sm:items-start w-full flex flex-col items-center justify-center">
-        <div className="bg-bark w-full m-2 p-2 border-8 border-lavender rounded-3xl flex flex-col items-center justify-center">
-          <h1 className="text-5xl text-cream font-bold text-center m-4">
-            This is the account page
-          </h1>
-          <div className="flex flex-wrap items-center justify-center bg-petal text-maroon text-3xl w-60 rounded-3xl ">
-            <span>
-              Name: <br></br> <br></br>
-              Address: <br></br> <br></br>
-              Previous orders: <br></br> <br></br>
-              Profile pic?
-            </span>
+        <div className="bg-none w-full m-2 p-2 rounded-3xl flex flex-col items-center justify-center">
+          <div className="flex flex-wrap items-center justify-center bg-none text-maroon text-3xl w-100 rounded-3xl ">
+            <SignupForm />
           </div>
         </div>
       </main>

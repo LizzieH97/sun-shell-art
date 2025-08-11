@@ -1,24 +1,24 @@
-type ItemProps = {
-  pic: string;
-  price: number;
-  name: string;
-  id: number;
-};
+"use client";
+import { useBasket } from "../context/basketContext";
 
-export default function ItemCard({ pic, price, name, id }: ItemProps) {
+export default function ItemCard({ id, name, price, pic }: any) {
+  const { addToBasket } = useBasket();
+
   return (
-    <div className="w-60 h-80 bg-petal p-3 flex flex-col gap-1 rounded-2xl border-4 border-bark m-1">
-      <img src={pic} className="h-48 rounded-xl object-cover"></img>
+    <div className="w-60 h-80 bg-beige p-3 rounded-2xl border-4 border-grape m-2 text-forest">
+      <img
+        src={pic}
+        alt={name}
+        className="h-48 w-52 rounded-xl object-cover border-4 border-forest"
+      />
       <div className="flex flex-col gap-0">
-        <div className="flex flex-row justify-between">
-          <div className="flex flex-col">
-            <span className="text-xl font-bold">{name}</span>
-            <p className="text-xs text-bark">ID: {id}</p>
-          </div>
-          <span className="font-bold text-maroon">£{price}</span>
-        </div>
-        <button className="hover:bg-bark hover:text-cream text-bark bg-lavender py-2 rounded-md">
-          Add to cart
+        <h3 className="text-xl font-bold">{name}</h3>
+        <p>£{price}</p>
+        <button
+          className="bg-grape text-cream border-4 border-lavender font-bold py-2 rounded-md hover:bg-lavender hover:text-grape mb-2"
+          onClick={() => addToBasket({ id, name, price, pic })}
+        >
+          Add to basket
         </button>
       </div>
     </div>
