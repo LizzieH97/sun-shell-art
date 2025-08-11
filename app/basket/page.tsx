@@ -3,7 +3,12 @@ import Footer from "../components/footer";
 import NavBar from "../components/navBar";
 
 import { useBasket } from "../context/basketContext";
-
+type ItemProps = {
+  name: string;
+  id: number;
+  price: number;
+  pic: string;
+};
 export default function Basket() {
   const { basket, removeFromBasket } = useBasket();
 
@@ -22,7 +27,7 @@ export default function Basket() {
               No items in basket
             </p>
           )}
-          {basket.map((item: any) => (
+          {basket.map((item: ItemProps) => (
             <div className="w-60 h-68 bg-petal p-3 rounded-2xl border-4 border-bark m-1">
               <img
                 src={item.pic}
@@ -44,7 +49,7 @@ export default function Basket() {
           ))}
         </div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
+      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center w-full">
         <Footer />
       </footer>
     </div>

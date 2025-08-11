@@ -16,7 +16,7 @@ export default function Account() {
           </div>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
+      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center w-full">
         <Footer />
       </footer>
     </div>

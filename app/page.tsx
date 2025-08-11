@@ -73,8 +73,10 @@ export default function Home() {
             return (
               <ItemCard
                 key={item.id}
-                {...item}
-                onAdd={() => addToBasket(item)}
+                pic={item.pic}
+                id={item.id}
+                name={item.name}
+                price={item.price}
               />
             );
           })}

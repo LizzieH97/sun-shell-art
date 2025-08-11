@@ -1,7 +1,12 @@
 "use client";
 import { useBasket } from "../context/basketContext";
-
-export default function ItemCard({ id, name, price, pic }: any) {
+type ItemProps = {
+  id: number;
+  name: string;
+  price: number;
+  pic: string;
+};
+export default function ItemCard({ id, name, price, pic }: ItemProps) {
   const { addToBasket } = useBasket();
 
   return (
