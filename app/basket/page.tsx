@@ -28,7 +28,10 @@ export default function Basket() {
             </p>
           )}
           {basket.map((item: ItemProps) => (
-            <div className="w-60 h-68 bg-petal p-3 rounded-2xl border-4 border-bark m-1">
+            <div
+              className="w-60 h-68 bg-petal p-3 rounded-2xl border-4 border-bark m-1"
+              key={item.id}
+            >
               <img
                 src={item.pic}
                 alt={item.name}
