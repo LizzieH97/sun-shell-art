@@ -1,4 +1,5 @@
 "use client";
+import Footer from "../components/footer";
 import NavBar from "../components/navBar";
 
 export default function ByCategory() {
@@ -25,7 +26,7 @@ export default function ByCategory() {
         </div>
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <div>this is the footer</div>
+        <Footer />
       </footer>
     </div>
   );

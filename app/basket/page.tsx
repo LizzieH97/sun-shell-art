@@ -1,4 +1,5 @@
 "use client";
+import Footer from "../components/footer";
 import NavBar from "../components/navBar";
 
 import { useBasket } from "../context/basketContext";
@@ -44,7 +45,7 @@ export default function Basket() {
         </div>
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <div>this is the footer</div>
+        <Footer />
       </footer>
     </div>
   );

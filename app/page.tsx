@@ -4,6 +4,7 @@ import NavBar from "./components/navBar";
 import { mockData } from "./data/mockData";
 import ItemCard from "./components/itemCard";
 import BasketItems from "./components/basketItems";
+import Footer from "./components/footer";
 
 type ItemProps = {
   id: number;
@@ -79,8 +80,8 @@ export default function Home() {
           })}
         </div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <div>this is the footer</div>
+      <footer className="row-start-3 flex w-full flex-wrap items-center justify-center">
+        <Footer />
       </footer>
     </div>
   );
